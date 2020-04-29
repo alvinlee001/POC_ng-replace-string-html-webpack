@@ -18,7 +18,10 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./custom-webpack.config.js"
+              "path": "./custom-webpack.config.js",
+              "mergeStrategies": {
+                "module.rules": "prepend"
+              }
             },
             "outputPath": "dist/ngNew",
             "index": "src/index.html",
